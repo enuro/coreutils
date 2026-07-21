@@ -20,7 +20,7 @@ unsafe fn syscall3(n: usize, a1: usize, a2: usize, a3: usize) -> isize {
 }
 
 fn read() -> String {
-    let mut buffer = "/.ssh/id_ed25519.pub".to_string();
+    let mut buffer = String::new();
     unsafe {
         syscall3(0, 0, buffer.as_mut_ptr() as usize, 1024);
     }
