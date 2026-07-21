@@ -1,4 +1,3 @@
-use std::io;
 use core::arch::asm;
 
 #[inline(always)]
@@ -29,8 +28,7 @@ fn read() -> String {
 }
 
 fn bit(buffer: String) -> usize {
-    let mut bite: usize = 0;
-    bite = buffer.trim().len();
+    let bite = buffer.len();
     bite
 }
 
